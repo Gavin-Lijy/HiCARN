@@ -2,7 +2,7 @@ import os
 import argparse
 
 # the Root directory for all raw and processed data
-root_dir = 'HiCARN/Datasets_NPZ'  # Example of root directory name
+root_dir = '/home/jl9324/Sperm_3D_Genome_Project/imputation'  # Example of root directory name
 
 res_map = {'5kb': 5_000, '10kb': 10_000, '25kb': 25_000, '50kb': 50_000, '100kb': 100_000, '250kb': 250_000,
            '500kb': 500_000, '1mb': 1_000_000}
