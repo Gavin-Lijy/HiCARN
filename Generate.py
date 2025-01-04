@@ -43,7 +43,7 @@ if __name__ == '__main__':
     pool_type = args.pool_type
 
     chr_list = set_dict[dataset]
-    postfix = cell_line.lower() if dataset == 'all' else dataset
+    postfix = cell_line if dataset == 'all' else dataset
     pool_str = 'nonpool' if scale == 1 else f'{pool_type}pool{scale}'
     print(f'Going to read {high_res} and {low_res} data, then deviding matrices with {pool_str}')
 

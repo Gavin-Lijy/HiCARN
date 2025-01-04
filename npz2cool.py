@@ -57,7 +57,7 @@ def read_npz(
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data-dir', type=str, required = True)
+    # parser.add_argument('--data-dir', type=str, required = True)
     parser.add_argument('--hic-caption', type=str, default = 'hic')
     parser.add_argument('--external-norm-file', type=str, 
                         default = 'NONE')
@@ -70,7 +70,7 @@ if __name__ == '__main__':
     parser.add_argument('-s', '--dataset', default='test' )
     args = parser.parse_args()
 
-    data_dir = args.data_dir
+    # data_dir = args.data_dir
     hic_caption = args.hic_caption
     external_norm_file = args.external_norm_file
     res = args.resolution
@@ -79,6 +79,7 @@ if __name__ == '__main__':
     bound = args.bound
     multiple = args.multiple
     resolution = res_map[res.split('_')[0]]
+    data_dir = os.path.join(root_dir, 'predict', cell_line)
 
     chr_list = set_dict[dataset]
     abandon_chromosome = abandon_chromosome_dict.get(cell_line, [])
