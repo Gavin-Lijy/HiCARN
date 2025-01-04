@@ -94,7 +94,7 @@ def data_divider_parser():
     req_args.add_argument('-lrc', dest='lr_cutoff', help='REQUIRED: cutoff for low resolution maps[example:100]',
                           default=100, type=int, required=True)
     req_args.add_argument('-s', dest='dataset', help='REQUIRED: Dataset for train/valid/predict(all)',
-                          default='train', choices=['K562_test', 'mESC_test', 'train', 'valid', 'GM12878_test'], )
+                          default='train', )
     hicarn_args = parser.add_argument_group('HiCARN Arguments')
     hicarn_args.add_argument('-chunk', dest='chunk', help='REQUIRED: chunk size for dividing[example:40]',
                               default=40, type=int, required=True)
